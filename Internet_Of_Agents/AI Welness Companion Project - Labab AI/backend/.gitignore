@@ -1,0 +1,61 @@
+# ===================== #
+# Frontend (React)      #
+# ===================== #
+
+# dependencies
+frontend/node_modules/
+
+# build output
+frontend/build/
+frontend/dist/
+
+# local env files
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# cache
+frontend/.cache/
+frontend/.parcel-cache/
+
+# ===================== #
+# Backend (Python)      #
+# ===================== #
+
+# bytecode
+backend/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# virtual environments
+backend/venv/
+backend/.venv/
+env/
+.venv/
+
+# logs
+*.log
+
+# python env files
+backend/.env
+backend/.env.*
+
+# build / distribution
+backend/build/
+backend/dist/
+backend/*.egg-info/
+
+# sqlite / databases
+*.sqlite3
+*.db
+*.db-journal
+
+# ===================== #
+# Editor / System files #
+# ===================== #
+
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
