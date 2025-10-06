@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  feedback-lite:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
+      - SESSION_SECRET=${SESSION_SECRET:-default-secret-change-in-production}
+      - AI_API_KEY=${AI_API_KEY}
+    volumes:
+      - feedback_data:/app/feedback.db
+    restart: unless-stopped
+
+volumes:
+  feedback_data:

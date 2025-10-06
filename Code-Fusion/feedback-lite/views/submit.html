@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback - Feedback Lite</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Feedback Lite</h1>
+            <nav class="nav">
+                <a href="/submit">Submit Feedback</a>
+                <a href="/admin">Admin Panel</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Share Your Feedback</h2>
+            <p>We'd love to hear from you! Please share your thoughts, suggestions, or concerns below.</p>
+            
+            <div id="alert-container"></div>
+
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-text" class="form-label">Your feedback</label>
+                    <textarea 
+                        id="feedback-text" 
+                        name="text" 
+                        class="form-control" 
+                        placeholder="Please share your feedback here..."
+                        required
+                        maxlength="2000"
+                    ></textarea>
+                    <small style="color: #666; font-size: 12px;">Maximum 2000 characters</small>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                    Submit Feedback
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const alertContainer = document.getElementById('alert-container');
+            const textArea = document.getElementById('feedback-text');
+            const feedbackText = textArea.value.trim();
+            
+            // Clear previous alerts
+            alertContainer.innerHTML = '';
+            
+            // Validate input
+            if (!feedbackText) {
+                showAlert('Please enter your feedback before submitting.', 'error');
+                return;
+            }
+            
+            if (feedbackText.length > 2000) {
+                showAlert('Feedback must be less than 2000 characters.', 'error');
+                return;
+            }
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            try {
+                const response = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: feedbackText })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showAlert('Thank you! Your feedback has been submitted successfully.', 'success');
+                    textArea.value = ''; // Clear the form
+                } else {
+                    showAlert(data.error || 'Failed to submit feedback. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Error submitting feedback:', error);
+                showAlert('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Feedback';
+            }
+        });
+        
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById('alert-container');
+            const alertClass = type === 'success' ? 'alert-success' : 'alert-error';
+            
+            alertContainer.innerHTML = `
+                <div class="alert ${alertClass}">
+                    ${message}
+                </div>
+            `;
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    alertContainer.innerHTML = '';
+                }, 5000);
+            }
+        }
+        
+        // Character counter
+        const textArea = document.getElementById('feedback-text');
+        textArea.addEventListener('input', function() {
+            const remaining = 2000 - this.value.length;
+            const small = this.parentNode.querySelector('small');
+            
+            if (remaining < 100) {
+                small.textContent = `${remaining} characters remaining`;
+                small.style.color = remaining < 0 ? '#e74c3c' : '#f39c12';
+            } else {
+                small.textContent = 'Maximum 2000 characters';
+                small.style.color = '#666';
+            }
+        });
+    </script>
+</body>
+</html>
