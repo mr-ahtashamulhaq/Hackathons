@@ -11,7 +11,6 @@ A minimal, powerful feedback collection web application with AI-powered insights
 - **Real-time Management**: Mark feedback as resolved/new, view detailed feedback
 - **Responsive Design**: Works on desktop and mobile devices
 - **Secure Authentication**: Session-based admin authentication
-- **SQLite Database**: Lightweight, file-based database (no external DB required)
 
 ## 📊 API Endpoints
 
