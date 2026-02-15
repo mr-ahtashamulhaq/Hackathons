@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 54 97% 49%;
+    --primary-foreground: 0 0% 6%;
+
+    --secondary: 216 20% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 54 97% 49%;
+    --accent-foreground: 0 0% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 120 100% 90%;
+    --warning: 54 97% 49%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 54 97% 49%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 54 97% 49%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 54 97% 49%;
+
+    --surface: 0 0% 100% / 0.05;
+    --surface-secondary: 216 20% 16%;
+    --border-subtle: 0 0% 100% / 0.15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Instrument Serif', serif;
+  }
+}
+
+/* Atmospheric noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Terminal grid ghost overlay */
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 49;
+  opacity: 0.02;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Radial glow zones */
+.glow-hero {
+  position: absolute;
+  top: -200px;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, hsla(54, 97%, 49%, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.glow-mid {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, hsla(0, 0%, 100%, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Font utility classes */
+.font-display {
+  font-family: 'Instrument Serif', serif;
+}
+
+.font-mono-data {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Stagger reveal animations */
+@keyframes fade-lift {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-lift {
+  animation: fade-lift 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.35s; }
+.stagger-4 { animation-delay: 0.5s; }
+.stagger-5 { animation-delay: 0.65s; }
+
+/* Button press depth */
+.btn-press:active {
+  transform: scale(0.97) translateY(1px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+  border-radius: 3px;
+}

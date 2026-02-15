@@ -1,0 +1,87 @@
+{
+  "commandData": [
+    {
+      "command": "npm run dev",
+      "count": 35,
+      "alias": "nr"
+    },
+    {
+      "command": "clear",
+      "count": 20,
+      "alias": null
+    },
+    {
+      "command": "cd 'd:\\Python Github\\transit-accessibility-app\\frontend'",
+      "count": 19,
+      "alias": "c'"
+    },
+    {
+      "command": "cd frontend",
+      "count": 14,
+      "alias": "cf"
+    },
+    {
+      "command": "python",
+      "count": 13,
+      "alias": null
+    },
+    {
+      "command": "gemini",
+      "count": 13,
+      "alias": null
+    },
+    {
+      "command": "node --version",
+      "count": 10,
+      "alias": "n-"
+    },
+    {
+      "command": "cd 'd:\\mit informatics 2025'",
+      "count": 9,
+      "alias": null
+    },
+    {
+      "command": "bash",
+      "count": 8,
+      "alias": null
+    },
+    {
+      "command": "npm run build",
+      "count": 8,
+      "alias": "nrb"
+    }
+  ],
+  "aliasSuggestions": [
+    {
+      "full": "npm run dev",
+      "alias": "nr",
+      "timesTyped": 35,
+      "timeSaved": "~1 min/week"
+    },
+    {
+      "full": "cd 'd:\\Python Github\\transit-accessibility-app\\frontend'",
+      "alias": "c'",
+      "timesTyped": 19,
+      "timeSaved": "~0 min/week"
+    },
+    {
+      "full": "cd frontend",
+      "alias": "cf",
+      "timesTyped": 14,
+      "timeSaved": "~0 min/week"
+    },
+    {
+      "full": "node --version",
+      "alias": "n-",
+      "timesTyped": 10,
+      "timeSaved": "~0 min/week"
+    },
+    {
+      "full": "npm run build",
+      "alias": "nrb",
+      "timesTyped": 8,
+      "timeSaved": "~0 min/week"
+    }
+  ],
+  "generated_at": "2026-02-16T03:02:15.336373"
+}

@@ -1,0 +1,86 @@
+{
+  "fileRiskData": [
+    {
+      "path": "src/exporter.py",
+      "riskScore": 8,
+      "changeCount": 4,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "validate_syntax.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "validate.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "simple_copy.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "setup.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "run_sequence.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "run_sample_data.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "run_create_data_now.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "run_cleanup.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    },
+    {
+      "path": "replace_file.py",
+      "riskScore": 4,
+      "changeCount": 2,
+      "contributors": 0,
+      "language": "python",
+      "lastModifiedDaysAgo": -1
+    }
+  ],
+  "generated_at": "2026-02-16T03:02:11.825976",
+  "days_analyzed": 30
+}

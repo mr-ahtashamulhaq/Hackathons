@@ -1,0 +1,68 @@
+{
+  "productivityScore": {
+    "current": 100,
+    "previous": 95,
+    "trend": "up",
+    "streak": 14,
+    "period": "7d"
+  },
+  "sparklineData": [
+    {
+      "day": "Tue",
+      "commits": 0
+    },
+    {
+      "day": "Wed",
+      "commits": 0
+    },
+    {
+      "day": "Thu",
+      "commits": 0
+    },
+    {
+      "day": "Fri",
+      "commits": 0
+    },
+    {
+      "day": "Sat",
+      "commits": 0
+    },
+    {
+      "day": "Sun",
+      "commits": 0
+    },
+    {
+      "day": "Mon",
+      "commits": 0
+    },
+    {
+      "day": "Tue",
+      "commits": 0
+    },
+    {
+      "day": "Wed",
+      "commits": 0
+    },
+    {
+      "day": "Thu",
+      "commits": 0
+    },
+    {
+      "day": "Fri",
+      "commits": 0
+    },
+    {
+      "day": "Sat",
+      "commits": 0
+    },
+    {
+      "day": "Sun",
+      "commits": 0
+    },
+    {
+      "day": "Mon",
+      "commits": 12
+    }
+  ],
+  "generated_at": "2026-02-16T03:02:11.820244"
+}
