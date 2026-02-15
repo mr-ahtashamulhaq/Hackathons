@@ -1,0 +1,9 @@
+{
+  "repo_url": ".",
+  "branch": "master",
+  "analyze_days": 30,
+  "shallow_clone": false,
+  "depth": 50,
+  "demo_repo_path": ".",
+  "description": "Demo configuration for DevFlow - uses current DevFlow repository itself for demo"
+}

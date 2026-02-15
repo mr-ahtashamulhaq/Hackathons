@@ -1,0 +1,15 @@
+# CLI Framework
+click>=8.1.7
+
+# Terminal UI
+rich>=13.7.0
+
+# Git Integration
+gitpython>=3.1.40
+
+# Configuration
+pyyaml>=6.0.1
+
+# Additional utilities
+python-dateutil>=2.8.2
+colorama>=0.4.6
