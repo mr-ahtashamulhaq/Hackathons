@@ -1,7 +1,9 @@
 # DevFlow - Developer Productivity CLI
 
 A powerful command-line tool for analyzing git repositories, tracking development workflows, and optimizing developer productivity.
-[![Live Demo](https://img.shields.io/badge/Live-Demo-black?style=for-the-badge)](https://github-copilot-hackathon.vercel.app)
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-000000?style=for-the-badge&logo=vercel&logoColor=3B82F6)](https://github-copilot-hackathon.vercel.app)
+
 
 ## 🚀 Features
 
