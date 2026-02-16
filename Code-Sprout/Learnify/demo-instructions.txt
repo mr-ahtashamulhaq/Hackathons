@@ -1,0 +1,101 @@
+LEARNIFY DEMO WALKTHROUGH
+========================
+
+Follow these steps to showcase all key features during your demo:
+
+## 1. INITIAL SETUP (30 seconds)
+- Open index.html in browser
+- Point out the clean, modern interface
+- Show the tagline: "Learning that doesn't feel like learning"
+- Demonstrate dark mode toggle (top right)
+- Show responsive design by resizing window
+
+## 2. TYPING SPEED TEST (2 minutes)
+- Click "Start Typing" on the Typing Speed Test card
+- Show the time selector (15s, 30s, 60s) - select 15s for demo
+- Start typing the passage - highlight real-time features:
+  * Live WPM calculation
+  * Real-time accuracy percentage
+  * Character highlighting (green=correct, red=incorrect)
+  * Countdown timer
+- Let test complete or press Esc to end early
+- Enter name "Demo User" and save score
+- Show that score appears in leaderboard (Profile button)
+
+## 3. QUIZ MODE (2 minutes)
+- Return to dashboard, click "Take Quiz"
+- Select "General Knowledge" category
+- Check "Show immediate feedback" option
+- Answer 2-3 questions, showing:
+  * Progress bar updates
+  * Immediate feedback (correct answers in green)
+  * Question counter
+- Complete quiz and save score
+- Show results screen with percentage
+
+## 4. FLASHCARDS (2 minutes)
+- Click "Study Cards" from dashboard
+- Select "Vocabulary Builder" deck
+- Demonstrate card flipping:
+  * Click card or press spacebar to flip
+  * Show smooth flip animation
+  * Navigate with arrow keys or buttons
+- Click "Create Deck" to show custom deck creation:
+  * Enter deck name "Demo Deck"
+  * Add 2 sample cards (e.g., "Hello" / "Greeting")
+  * Save deck
+- Show new custom deck appears in list
+- Study the custom deck briefly
+
+## 5. GAMIFICATION FEATURES (1 minute)
+- Open Profile panel (top right)
+- Show achievements/badges section
+- Demonstrate leaderboard tabs (Typing vs Quiz)
+- Point out study streak counter on dashboard
+- Show "Reset All Data" functionality (don't actually reset)
+
+## 6. ACCESSIBILITY & KEYBOARD NAVIGATION (1 minute)
+- Demonstrate keyboard shortcuts:
+  * Tab navigation through interface
+  * Spacebar to flip flashcards
+  * Arrow keys for flashcard navigation
+  * Number keys (1-4) for quiz answers
+- Show focus indicators and ARIA labels
+- Mention screen reader compatibility
+
+## 7. TECHNICAL HIGHLIGHTS (30 seconds)
+- Mention key technical features:
+  * Pure vanilla JavaScript (no frameworks)
+  * Runs completely offline
+  * All data stored locally
+  * Mobile responsive
+  * No build tools required
+
+## QUICK FEATURE CHECKLIST
+✓ Real-time typing metrics with character highlighting
+✓ Multiple quiz categories with immediate feedback
+✓ Flashcard flip animations and custom deck creation
+✓ Local leaderboards and score persistence
+✓ Badge/achievement system
+✓ Study streak tracking
+✓ Dark/light mode toggle
+✓ Full keyboard accessibility
+✓ Responsive mobile design
+✓ localStorage data persistence
+
+## TROUBLESHOOTING TIPS
+- If localStorage seems full, use "Reset All Data"
+- Refresh page if any display issues occur
+- Ensure JavaScript is enabled in browser
+- Works best in modern browsers (Chrome, Firefox, Safari, Edge)
+
+## DEMO TALKING POINTS
+- "No installation required - just open and learn"
+- "Gamification makes learning engaging"
+- "Fully accessible with keyboard navigation"
+- "Your progress is always saved locally"
+- "Works offline - perfect for any environment"
+- "Clean, distraction-free interface"
+
+Total demo time: ~8 minutes for full walkthrough
+Quick demo: ~4 minutes hitting main features only
