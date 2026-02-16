@@ -7,7 +7,7 @@ import {
   AlertTriangle, Bell, Volume2, VolumeX, Smile, Frown, Meh,
   Activity, BarChart3, PieChart, TreePine, Waves, Wind
 } from 'lucide-react';
-import './ai-therapy-companion.css';
+import './wellness-design-system.css';
 
 const AIWellnessCompanion = () => {
   const [currentMode, setCurrentMode] = useState('chat');
@@ -18,7 +18,7 @@ const AIWellnessCompanion = () => {
   const [messages, setMessages] = useState([
     {
       type: 'ai',
-      content: 'Hello there! 🌟 I\'m Luna, your personal wellness companion. I\'m here to listen, support, and walk alongside you on your mental health journey. How are you feeling today?',
+      content: 'I\'m Luna, your wellness companion. I\'m here to listen and support you through your mental health journey. How are you feeling today?',
       mood: 'warm',
       timestamp: new Date().toLocaleTimeString(),
       hasActions: false,
@@ -104,35 +104,35 @@ const AIWellnessCompanion = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Enhanced persona system
+  // Enhanced persona system - removed emojis, using letter initials
   const personas = {
     luna: {
       name: 'Luna',
-      personality: 'Gentle, nurturing, and wise like moonlight',
-      greeting: 'Hello, beautiful soul',
-      color: 'purple',
-      icon: '🌙'
+      personality: 'Gentle, nurturing, and wise',
+      greeting: 'Hello',
+      color: 'accent',
+      icon: 'L'
     },
     sage: {
       name: 'Sage',
-      personality: 'Wise, grounded, and naturally healing',
-      greeting: 'Welcome, friend',
-      color: 'green',
-      icon: '🌿'
+      personality: 'Wise, grounded, and healing',
+      greeting: 'Welcome',
+      color: 'success',
+      icon: 'S'
     },
     phoenix: {
       name: 'Phoenix',
-      personality: 'Empowering, resilient, and transformative',
+      personality: 'Empowering and resilient',
       greeting: 'Rise and shine',
-      color: 'orange',
-      icon: '🔥'
+      color: 'warning',
+      icon: 'P'
     },
     aurora: {
       name: 'Aurora',
-      personality: 'Inspiring, hopeful, and radiant',
+      personality: 'Inspiring and hopeful',
       greeting: 'Good to see you',
-      color: 'blue',
-      icon: '✨'
+      color: 'calm',
+      icon: 'A'
     }
   };
 
