@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - Learning that doesn't feel like learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-icon">📚</span>
+                Learnify
+            </h1>
+            <p class="tagline">Learning that doesn't feel like learning.</p>
+            <div class="header-controls">
+                <button id="theme-toggle" class="btn btn-icon" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="profile-toggle" class="btn btn-secondary">Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard -->
+            <section id="dashboard" class="dashboard active">
+                <div class="modules-grid">
+                    <div class="module-card" data-module="typing">
+                        <div class="module-icon">⌨️</div>
+                        <h3>Typing Speed Test</h3>
+                        <p>Test your typing speed and accuracy</p>
+                        <button class="btn btn-primary">Start Typing</button>
+                    </div>
+                    <div class="module-card" data-module="quiz">
+                        <div class="module-icon">🧠</div>
+                        <h3>Quiz Mode</h3>
+                        <p>Challenge yourself with quizzes</p>
+                        <button class="btn btn-primary">Take Quiz</button>
+                    </div>
+                    <div class="module-card" data-module="flashcards">
+                        <div class="module-icon">🃏</div>
+                        <h3>Flashcards</h3>
+                        <p>Study with interactive flashcards</p>
+                        <button class="btn btn-primary">Study Cards</button>
+                    </div>
+                </div>
+
+                <div class="stats-overview">
+                    <div class="stat-card">
+                        <div class="stat-value" id="streak-display">0</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="badges-count">0</div>
+                        <div class="stat-label">Badges</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typing Speed Test -->
+            <section id="typing-module" class="module-section">
+                <div class="module-header">
+                    <button class="btn btn-back" data-back="dashboard">← Back</button>
+                    <h2>Typing Speed Test</h2>
+                </div>
+                
+                <div class="typing-controls">
+                    <div class="time-selector">
+                        <button class="btn btn-time active" data-time="15">15s</button>
+                        <button class="btn btn-time" data-time="30">30s</button>
+                        <button class="btn btn-time" data-time="60">60s</button>
+                    </div>
+                </div>
+
+                <div class="typing-area">
+                    <div class="typing-stats">
+                        <div class="stat">
+                            <span class="stat-label">WPM</span>
+                            <span class="stat-value" id="wpm-display">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Accuracy</span>
+                            <span class="stat-value" id="accuracy-display">100%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Time</span>
+                            <span class="stat-value" id="time-display">15</span>
+                        </div>
+                    </div>
+                    
+                    <div class="passage-container">
+                        <div id="passage-display" class="passage-text" role="textbox" aria-label="Typing passage"></div>
+                    </div>
+                    
+                    <textarea 
+                        id="typing-input" 
+                        class="typing-input" 
+                        placeholder="Start typing to begin the test..."
+                        aria-label="Type the passage above"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                </div>
+
+                <div id="typing-results" class="results-panel hidden">
+                    <h3>Test Complete!</h3>
+                    <div class="results-stats">
+                        <div class="result-stat">
+                            <span class="result-label">Words Per Minute</span>
+                            <span class="result-value" id="final-wpm">0</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-label">Accuracy</span>
+                            <span class="result-value" id="final-accuracy">0%</span>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+                        <button class="btn btn-primary" id="save-score">Save Score</button>
+                        <button class="btn btn-secondary" id="retry-typing">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Mode -->
+            <section id="quiz-module" class="module-section">
+                <div class="module-header">
+                    <button class="btn btn-back" data-back="dashboard">← Back</button>
+                    <h2>Quiz Mode</h2>
+                </div>
+
+                <div id="quiz-setup" class="quiz-setup">
+                    <h3>Choose a Category</h3>
+                    <div class="category-grid" id="category-grid"></div>
+                    <div class="quiz-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="immediate-feedback">
+                            <span class="checkmark"></span>
+                            Show immediate feedback
+                        </label>
+                    </div>
+                </div>
+
+                <div id="quiz-game" class="quiz-game hidden">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="quiz-progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="quiz-progress-text">1 / 5</span>
+                    </div>
+
+                    <div class="question-container">
+                        <h3 id="question-text" class="question-text"></h3>
+                        <div id="choices-container" class="choices-container"></div>
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button class="btn btn-secondary" id="quiz-next" disabled>Next</button>
+                    </div>
+                </div>
+
+                <div id="quiz-results" class="results-panel hidden">
+                    <h3>Quiz Complete!</h3>
+                    <div class="results-stats">
+                        <div class="result-stat">
+                            <span class="result-label">Score</span>
+                            <span class="result-value" id="quiz-score">0/0</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-label">Percentage</span>
+                            <span class="result-value" id="quiz-percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <input type="text" id="quiz-player-name" placeholder="Enter your name" maxlength="20">
+                        <button class="btn btn-primary" id="save-quiz-score">Save Score</button>
+                        <button class="btn btn-secondary" id="retry-quiz">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flashcards -->
+            <section id="flashcards-module" class="module-section">
+                <div class="module-header">
+                    <button class="btn btn-back" data-back="dashboard">← Back</button>
+                    <h2>Flashcards</h2>
+                    <button class="btn btn-secondary" id="create-deck">Create Deck</button>
+                </div>
+
+                <div id="deck-selection" class="deck-selection">
+                    <div class="decks-grid" id="decks-grid"></div>
+                </div>
+
+                <div id="flashcard-study" class="flashcard-study hidden">
+                    <div class="study-header">
+                        <button class="btn btn-back" id="back-to-decks">← Back to Decks</button>
+                        <h3 id="deck-title">Deck Title</h3>
+                        <div class="deck-actions">
+                            <button class="btn btn-icon" id="edit-deck" aria-label="Edit deck">✏️</button>
+                            <button class="btn btn-icon" id="shuffle-deck" aria-label="Shuffle cards">🔀</button>
+                        </div>
+                    </div>
+
+                    <div class="card-counter">
+                        <span id="card-counter">1 / 10</span>
+                    </div>
+
+                    <div class="flashcard-container">
+                        <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard - press space to flip">
+                            <div class="flashcard-front">
+                                <div class="card-content" id="card-front"></div>
+                            </div>
+                            <div class="flashcard-back">
+                                <div class="card-content" id="card-back"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flashcard-controls">
+                        <button class="btn btn-secondary" id="prev-card" aria-label="Previous card">← Previous</button>
+                        <button class="btn btn-primary" id="flip-card">Flip Card</button>
+                        <button class="btn btn-secondary" id="next-card" aria-label="Next card">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Deck Editor Modal -->
+                <div id="deck-editor" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="editor-title">Create New Deck</h3>
+                            <button class="btn btn-icon modal-close" aria-label="Close">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="deck-name">Deck Name</label>
+                                <input type="text" id="deck-name" placeholder="Enter deck name" maxlength="50">
+                            </div>
+                            <div class="cards-editor">
+                                <div class="cards-header">
+                                    <h4>Cards</h4>
+                                    <button class="btn btn-secondary" id="add-card">Add Card</button>
+                                </div>
+                                <div id="cards-list" class="cards-list"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary modal-close">Cancel</button>
+                            <button class="btn btn-primary" id="save-deck">Save Deck</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Panel -->
+            <div id="profile-panel" class="profile-panel hidden">
+                <div class="profile-header">
+                    <h3>Your Profile</h3>
+                    <button class="btn btn-icon" id="close-profile" aria-label="Close profile">×</button>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h4>Achievements</h4>
+                        <div id="badges-container" class="badges-container"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h4>Leaderboard</h4>
+                        <div class="leaderboard-tabs">
+                            <button class="tab-btn active" data-tab="typing">Typing</button>
+                            <button class="tab-btn" data-tab="quiz">Quiz</button>
+                        </div>
+                        <div id="leaderboard-content" class="leaderboard-content"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h4>Data Management</h4>
+                        <button class="btn btn-danger" id="reset-data">Reset All Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
