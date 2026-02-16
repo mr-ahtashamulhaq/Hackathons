@@ -1,6 +1,7 @@
 # Learnify - Learning that doesn't feel like learning
 
 A single-page learning web application built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no server required - just open `index.html` and start learning!
+[![Live Demo](https://img.shields.io/badge/Live-Demo-000000?style=for-the-badge&logo=vercel&logoColor=blue)](https://learnify-ivory-omega.vercel.app)
 
 ## 🚀 Quick Start
 
