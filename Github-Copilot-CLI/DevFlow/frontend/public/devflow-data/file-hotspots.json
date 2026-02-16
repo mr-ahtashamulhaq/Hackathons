@@ -1,7 +1,7 @@
 {
   "fileRiskData": [
     {
-      "path": "src/exporter.py",
+      "path": "Gemini-DeepSeek/backend/services/climate_hazards_service.py",
       "riskScore": 8,
       "changeCount": 4,
       "contributors": 0,
@@ -9,78 +9,78 @@
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "validate_syntax.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/services/climate_education_service.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "validate.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/services/chat_service.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "simple_copy.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/services/carbon_intensity_service.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "setup.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/services/assistant_service.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "run_sequence.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/services/__init__.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "run_sample_data.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/scripts/seed_carbon_intensity.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "run_create_data_now.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/routes/users.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "run_cleanup.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/routes/routing.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     },
     {
-      "path": "replace_file.py",
-      "riskScore": 4,
-      "changeCount": 2,
+      "path": "Gemini-DeepSeek/backend/routes/maps.py",
+      "riskScore": 8,
+      "changeCount": 4,
       "contributors": 0,
       "language": "python",
       "lastModifiedDaysAgo": -1
     }
   ],
-  "generated_at": "2026-02-16T03:02:11.825976",
+  "generated_at": "2026-02-16T12:20:55.475223",
   "days_analyzed": 30
 }

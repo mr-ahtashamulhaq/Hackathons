@@ -4,25 +4,33 @@
       "type": "workflow",
       "severity": "low",
       "title": "Peak Productivity Hour Identified",
-      "description": "Most commits occur at 2:00 AM (6 commits). This appears to be your most productive coding time.",
+      "description": "Most commits occur at 3:00 AM (10 commits). This appears to be your most productive coding time.",
       "recommendation": "Protect this time block from meetings and interruptions for focused coding work.",
-      "timestamp": "2026-02-16T03:02:16.540941"
+      "timestamp": "2026-02-16T12:21:37.305559"
     },
     {
       "type": "workflow",
       "severity": "low",
       "title": "Monday is Your Most Productive Day",
-      "description": "12 commits on Mondays indicate this is your most productive day of the week.",
+      "description": "10 commits on Mondays indicate this is your most productive day of the week.",
       "recommendation": "Schedule important coding tasks and deep work for this day when possible.",
-      "timestamp": "2026-02-16T03:02:16.540949"
+      "timestamp": "2026-02-16T12:21:37.305597"
     },
     {
       "type": "workflow",
       "severity": "medium",
       "title": "Late Night Coding Pattern Detected",
-      "description": "12 commits (100%) occur between 10 PM and 5 AM.",
+      "description": "17 commits (100%) occur between 10 PM and 5 AM.",
       "recommendation": "Consider adjusting work schedule for better work-life balance. Late night coding can lead to burnout and lower code quality.",
-      "timestamp": "2026-02-16T03:02:16.540960"
+      "timestamp": "2026-02-16T12:21:37.305635"
+    },
+    {
+      "type": "health",
+      "severity": "medium",
+      "title": "Contributor Overload Detected",
+      "description": "mr-ahtashamulhaq is responsible for 82% of all commits. Workload is heavily concentrated.",
+      "recommendation": "Distribute work more evenly across the team to prevent burnout and reduce dependency on single individuals.",
+      "timestamp": "2026-02-16T12:21:37.305725"
     },
     {
       "type": "command",
@@ -30,23 +38,23 @@
       "title": "No Testing Commands Detected",
       "description": "No test execution commands found in recent history. Tests may not be running regularly.",
       "recommendation": "Integrate testing into your workflow. Run tests before commits and consider setting up pre-commit hooks.",
-      "timestamp": "2026-02-16T03:02:16.540987"
+      "timestamp": "2026-02-16T12:21:37.305762"
     }
   ],
   "summary": {
-    "total": 4,
+    "total": 5,
     "by_severity": {
       "high": 1,
-      "medium": 1,
+      "medium": 2,
       "low": 2
     },
     "by_type": {
       "risk": 0,
       "workflow": 3,
-      "health": 0,
+      "health": 1,
       "command": 1
     }
   },
-  "generated_at": "2026-02-16T03:02:16.540996",
+  "generated_at": "2026-02-16T12:21:37.305791",
   "days_analyzed": 30
 }
