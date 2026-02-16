@@ -2,6 +2,7 @@
 *Part of the “Internet of Agents” Hackathon via LabLab.ai*
 https://lablab.ai/event/internet-of-agents/synthara-agents/ai-powered-mental-wellness-companion
 ---
+[![Live Demo](https://img.shields.io/badge/Live-Demo-000000?style=for-the-badge&logo=vercel&logoColor=blue)](https://ai-wellness-companion-psi.vercel.app)
 
 ## 🎯 Project Overview  
 AI Wellness Companion is an intelligent agent-powered wellness assistant designed to help users track mood, receive personalized mental health guidance, and maintain emotional well-being through conversational support and insights. It’s built in the spirit of the Internet of Agents challenge — combining autonomous agent logic, AI reasoning, and user interaction.
@@ -36,5 +37,3 @@ Agents are structured to handle:
 1. **Conversation Agent** — responds to user prompts with empathy.  
 2. **Memory Agent** — logs mood entries, tracks trends.  
 3. **Advisor Agent** — periodically suggests wellness exercises or prompts.
-
----
