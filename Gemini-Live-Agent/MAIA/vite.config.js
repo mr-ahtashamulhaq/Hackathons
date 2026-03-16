@@ -12,16 +12,11 @@ export default defineConfig({
   },
 
   server: {
-    host: true,  // allow external connections (ngrok)
     port: 5173,
-    strictPort: true,
-    allowedHosts: true,  // allow all hosts including ngrok domains
   },
 
   preview: {
-    host: true,
     port: 4173,
-    strictPort: true,
   },
 
   build: {
