@@ -2,6 +2,8 @@
 
 MAIA is a real-time AI doula designed to support mothers before, during, and after pregnancy through conversational AI, symptom awareness, and maternal education.
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-000000?style=for-the-badge&logo=vercel&logoColor=3B82F6)](maternal-ai-assistant.vercel.app)
+
 ## Project Overview
 
 MAIA serves as a supportive, always-available companion for expecting and new mothers. By combining voice-activated AI with practical tools for health tracking, MAIA addresses the gap in continuous maternal support. The assistant provides evidence-based guidance, emotional support, and critical health awareness, helping to empower mothers in their healthcare journey.
