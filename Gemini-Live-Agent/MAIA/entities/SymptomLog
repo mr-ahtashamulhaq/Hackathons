@@ -1,0 +1,53 @@
+{
+  "name": "SymptomLog",
+  "type": "object",
+  "properties": {
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of symptoms"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "severe",
+        "emergency"
+      ],
+      "description": "Overall severity"
+    },
+    "ai_assessment": {
+      "type": "string",
+      "description": "AI response and guidance"
+    },
+    "escalation_level": {
+      "type": "string",
+      "enum": [
+        "monitor",
+        "call_provider",
+        "urgent_care",
+        "emergency_911"
+      ],
+      "description": "Recommended escalation"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Photo if submitted"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "prenatal",
+        "labor",
+        "postpartum"
+      ],
+      "description": "Current maternal stage"
+    }
+  },
+  "required": [
+    "symptoms"
+  ]
+}

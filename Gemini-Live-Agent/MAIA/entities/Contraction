@@ -1,0 +1,41 @@
+{
+  "name": "Contraction",
+  "type": "object",
+  "properties": {
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the contraction started"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the contraction ended"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Duration in seconds"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "strong",
+        "very_strong"
+      ],
+      "description": "Intensity level"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Session grouping ID"
+    }
+  },
+  "required": [
+    "start_time"
+  ]
+}
