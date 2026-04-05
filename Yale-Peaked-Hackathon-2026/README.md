@@ -1,7 +1,6 @@
 # BlueQubit × Yale Quantum Hackathon - Solutions
 
-This repository contains my solutions for the **BlueQubit Quantum Hackathon** conducted in collaboration with **Yale University**.
-
+This repository contains my solutions for the **BlueQubit Quantum Hackathon** conducted in collaboration with **Yale University** ([Hackathon Link](https://app.bluequbit.io/hackathons/wSvCWg8f38spoXX3)).
 The challenge focused on solving **“Peaked Circuits”** - quantum circuits designed such that one specific bitstring has a significantly higher probability than all others. The goal was to identify that peak bitstring efficiently.
 
 ---
