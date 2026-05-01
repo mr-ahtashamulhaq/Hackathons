@@ -1,4 +1,4 @@
-### Built for HackerRank Orchestrate Hackathon
+# Built for HackerRank Orchestrate Hackathon
 
 ---
 
